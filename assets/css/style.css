@@ -1,0 +1,371 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+:root{
+	/* ------------------Colors------------------ https://colorhunt.co/palette/ff6d60f7d060f3e99f98d8aa */
+    --maincolor		    : #FF6D60;
+    --secondarycolor    : #F7D060;
+
+	--text			    : #000000;
+	--headingtext		: #000000;
+	--siteLinkColor     : #98D8AA;
+	--siteLinkHoverColor: #F3E99F;
+
+    --black			    : #000000;
+	--white			    : #ffffff;
+
+
+    /* ------------------Fonts------------------ */
+	--fontMain	        : 'Lato', sans-serif;
+    
+    /* ------------------Animation------------------ */
+    --siteAnimation     : all 0.3s ease 0s;
+}
+
+/* --------------------Reset css------------------ */
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+a,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+	margin: 0;
+	padding: 0;
+	vertical-align: baseline;
+	font-size: inherit;
+	background: transparent;
+	border: 0;
+	outline: none;
+	-webkit-font-smoothing: subpixel-antialiased;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+article,
+aside,
+footer,
+header,
+nav,
+section,
+figcaption,
+figure,
+main {
+	display: block;
+}
+
+/* ------------------Text-level semantics------------------ */
+sub,
+sup {
+	position: relative;
+	vertical-align: baseline;
+	font-size: 75%;
+	line-height: 0;
+}
+
+sub {
+	bottom: -0.25em;
+}
+
+sup {
+	top: -0.5em;
+}
+
+/* ------------------Embedded content------------------ */
+audio,
+video,
+iframe {
+	display: block;
+	max-width: 100%;
+}
+
+ul,
+ol,
+li{
+	list-style: none;
+}
+
+/* ------------------UL OL LI------------------ */
+.main-content ul,
+.main-content ol{
+	margin-left: 14px;
+	margin-bottom: 20px;
+}
+.main-content ul li{
+	list-style: none;
+	position: relative;
+}
+.main-content ul li::before{
+	content: '';
+	position: absolute;
+	left: -13px;
+	top: 11px;
+	width: 4px;
+	height: 4px;
+	border-radius: 50%;
+	transform: translateY(-50%);
+	background-color: var(--maincolor);
+}
+.main-content ol li{
+	list-style: decimal;
+}
+
+/* ------------------Image and Picture------------------ */
+img {
+	display: inline-block;
+	height: auto;
+	max-width: 100%;
+	vertical-align: top;
+	border: none;
+}
+
+picture {
+	display: inline-block;
+	vertical-align: top;
+}
+
+/* ------------------Set core body defaults------------------ */
+html {
+	overflow-x: hidden;
+}
+body {
+	scroll-behavior: smooth;
+	text-rendering: optimizeSpeed;
+	line-height: 1.75;
+	overflow-x: hidden;
+}
+
+/* ------------------Theme CSS------------------ */
+body {
+	font-family: var(--fontMain);
+	font-size: 18px;
+	color: var(--text);
+	font-weight: 400;
+	line-height: 1.2;
+	letter-spacing: 0;
+	background-color: #ffffff;
+}
+
+/* ------------------Headings------------------ */
+h1,.h1,
+h2,.h2,
+h3,.h3,
+h4,.h4,
+h5,.h5,
+h6,.h6{
+	font-weight: 700;
+	color: var(--headingtext);
+    line-height: 1.2;
+    margin-bottom: 16px;
+}
+
+h1,.h1 {
+    font-size: 32px;
+}
+
+h2,.h2 {
+    font-size: 28px;
+}
+
+h3,.h3 {
+    font-size: 24px;
+}
+
+h4,.h4 {
+    font-size: 22px;
+}
+
+h5,.h5 {
+	font-size: 20px;
+}
+
+h6,.h6 {
+	font-size: 18px;
+}
+
+/* ------------------Paragraph/Text------------------ */
+p {
+	margin: 0 0 20px;
+}
+p:last-child {
+	margin: 0;
+}
+
+/* ------------------Anchor/Link------------------ */
+a{
+	text-decoration: none;
+	transition: var(--siteAnimation);
+    color: var(--siteLinkColor);
+}
+a:hover{
+	text-decoration: none;
+	color: var(--siteLinkHoverColor);
+}
+
+/* ------------------Button------------------ */
+.button{
+    font-family: var(--fontMain);
+	font-size: 18px;
+	font-weight: 400;
+	color: var(--white);
+	text-decoration: none;
+	text-align: center;
+    line-height: 1.2;
+	
+	background-color: var(--maincolor);
+	padding: 16px 32px;
+	border: none;
+	border-radius: 5px;
+    
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+    
+	cursor: pointer;
+    
+	transition: var(--siteAnimation);
+}
+.button:hover, .button:focus{
+    background-color: var(--secondarycolor);
+    color: var(--white);
+}
+.button:focus{
+    outline: none;
+    background-color: var(--secondarycolor);
+	color: var(--white);
+}
+
+/* ------------------Inputs------------------ */
+label{
+	font-size: 18px;
+	font-weight: 600;
+	color: var(--text);
+}
+input[type=text],
+input[type=email],
+input[type=url],
+input[type=tel],
+input[type=phone],
+input[type=number],
+input[type=password],
+input[type=date],
+input[type=timepicker],
+select,
+textarea{
+	width: 100%;
+	border: 1px solid var(--black);
+	background-color: #ffffff;
+	border-radius: 5px;
+	padding: 16px 32px 16px 32px;
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 1.2;
+	color: var(--text);
+	outline: none;
+    transition: border 0.3s ease 0s;
+}
+input[type=text]:focus,
+input[type=email]:focus,
+input[type=url]:focus,
+input[type=tel]:focus,
+input[type=phone]:focus,
+input[type=number]:focus,
+input[type=password]:focus,
+input[type=date]:focus,
+input[type=timepicker]:focus,
+select:focus,
+textarea:focus{
+	border-color: var(--secondarycolor);
+}
+
+/* ------------------Container------------------ */
+.wrapper{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+}
+.main-container{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+}
+.main-content{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.container{
+    width: 100%;
+    max-width: 1280px;
+    padding-left: 16px;
+    padding-right: 16px;
+    /* margin-left: auto;
+    margin-right: auto; */
+}
